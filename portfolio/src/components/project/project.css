@@ -1,0 +1,109 @@
+.projects {
+    background: linear-gradient(135deg, #1A1D3A, #2A2D5A);
+    padding: 80px 20px;
+  }
+  
+  .projectHead {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #FFD700, #FF6F61);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 24px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(255, 111, 97, 0.25);
+  }
+  
+  .project-card-head {
+    font-size: 1.6rem;
+    /* color: linear-gradient(45deg, #FF6F61, #FFD700); */
+    color: #FFD700;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .date {
+    color: #bbbbbb;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  
+  .description {
+    color: #d5d5d5;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-tag {
+    background: linear-gradient(45deg, #FF6F61, #FFD700);
+    color: #1A1D3A;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* NEW: Project link styling */
+  .project-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #FF6F61;
+    text-decoration: underline;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects h2 {
+      font-size: 2.1rem;
+    }
+    .project-card {
+      padding: 18px;
+    }
+  }
+  

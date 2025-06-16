@@ -1,0 +1,153 @@
+.about {
+  background: linear-gradient(135deg, #1A1D3A, #2A2D5A);
+  padding-top: 60px; 
+  border-top: none;
+  width: 100%;
+  /* position: fixed; */
+}
+
+.aboutTag{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #FFD700, #FF6F61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  animation: slideIn 1s ease-out;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile-pic {
+  width: 70vw;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid transparent;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 111, 97, 0.5);
+}
+
+.about-text{
+    margin-bottom: 4rem;
+}
+
+.nameHead {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F5F5F5;
+  margin-bottom: 20px;
+}
+
+.namePara {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #B0B0B0;
+  margin-bottom: 13px;
+}
+
+.academicHead {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FFD700;
+  margin: 0 0 10px 0;
+}
+
+.academicUlLists {
+  list-style: none;
+}
+
+.academicLiList {
+  font-size: 1.2rem;
+  color: #B0B0B0;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.academicLiList::before {
+  content: '★';
+  color: #FF6F61;
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .nameHead , .namePara , .academicHead{
+    text-align: center;
+  }
+  .about-content {
+    flex-direction: column;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+    margin-top: 50px;
+  }
+
+  .nameHead {
+    font-size: 1.8rem;
+  }
+
+  .namePara,
+  .academicLiList {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutTag {
+    font-size: 2.2rem;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .nameHead {
+    font-size: 1.5rem;
+  }
+
+  .namePara,
+  .academicLiList {
+    font-size: 1rem;
+  }
+
+}
